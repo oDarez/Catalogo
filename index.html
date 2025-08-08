@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de productos premium con diseño minimalista y experiencia de usuario excepcional">
+  <meta name="keywords" content="catálogo, productos, premium, minimalista, moderno, e-commerce">
+  <meta name="author" content="Professional Catalog">
+  <meta name="theme-color" content="#0066FF">
+  <meta property="og:title" content="Catálogo Profesional - Productos Premium">
+  <meta property="og:description" content="Descubre productos excepcionales en un entorno minimalista y sofisticado">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=630&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1">
+  <title>Belleza Natural - Catálogo</title>
+</head>
+<body>
+  <!-- Header con navegación premium -->
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Navegación principal">
+      <div class="nav__container">
+        <div class="nav__brand">
+          <img class="nav__logo" src="logo.svg" alt="Logo Belleza Natural" width="32" height="32" />
+          <span class="nav__title">Belleza Natural</span>
+        </div>
+        
+        <ul class="nav__menu" role="menubar">
+          <li><a class="nav__link" href="#inicio" role="menuitem">Inicio</a></li>
+          <li><a class="nav__link" href="#productos" role="menuitem">Productos</a></li>
+          <li><a class="nav__link" href="#sobre" role="menuitem">Sobre Nosotros</a></li>
+          <li><a class="nav__link" href="#contacto" role="menuitem">Contacto</a></li>
+        </ul>
+        
+        <div class="nav__actions">
+          <button class="search-toggle" aria-label="Buscar productos" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M19 19L13 13M15 8A7 7 0 1 1 1 8A7 7 0 0 1 15 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          
+          <button class="cart-btn" aria-label="Carrito de compras" aria-describedby="cart-count">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17A2 2 0 0 1 15 19H9A2 2 0 0 1 7 17V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="cart-badge" id="cart-count" aria-live="polite">0</span>
+          </button>
+          
+          <button class="auth-btn">Iniciar Sesión</button>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Barra de búsqueda expandible -->
+    <div class="search-bar" role="search">
+      <div class="search-container">
+        <input type="search" class="search-input" placeholder="Buscar productos, marcas, categorías..." aria-label="Buscar productos">
+        <button class="search-submit" aria-label="Buscar">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M19 19L13 13M15 8A7 7 0 1 1 1 8A7 7 0 0 1 15 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section Premium -->
+    <section class="hero" id="inicio" aria-label="Sección principal">
+      <div class="hero__background">
+        <div class="hero__image" style="background-image: url('banner-belleza.jpg')"></div>
+        <div class="hero__overlay"></div>
+      </div>
+      
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Belleza <span class="hero__accent">100% Natural</span>
+        </h1>
+        <p class="hero__subtitle">
+          Mascarillas, cremas y tratamientos para la piel hechos a mano, con recetas naturales y sin químicos. Cuida tu piel con productos orgánicos y libres de procesamiento industrial.
+        </p>
+        <div class="hero__actions">
+          <a href="#productos" class="btn btn--primary">Explorar Catálogo</a>
+          <a href="#sobre" class="btn btn--secondary">Conocer Más</a>
+        </div>
+      </div>
+      
+      <div class="hero__scroll-indicator">
+        <span>Desliza para explorar</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 3V17M3 10L10 17L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Filtros Premium -->
+    <section class="filters" aria-label="Filtros de productos">
+      <div class="filters__container">
+        <div class="filters__header">
+          <h2 class="filters__title">Filtrar Productos</h2>
+          <button class="filters__reset">Limpiar Filtros</button>
+        </div>
+        
+        <form class="filters__form" role="search">
+          <div class="filter-group">
+            <label class="filter-label">Categoría</label>
+            <select class="filter-select" name="category" aria-label="Seleccionar categoría">
+              <option value="">Todas las categorías</option>
+              <option value="mascarillas">Mascarillas</option>
+              <option value="cremas">Cremas</option>
+              <option value="aceites">Aceites</option>
+              <option value="serums">Sérums</option>
+              <option value="kits">Kits y Packs</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label class="filter-label">Precio</label>
+            <div class="price-range">
+              <input type="range" class="price-slider" min="0" max="1000" step="10" value="500" aria-label="Precio máximo">
+              <div class="price-display">
+                <span>$0</span>
+                <span class="price-current">$500</span>
+                <span>$1000</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <label class="filter-label">Ordenar por</label>
+            <select class="filter-select" name="sort" aria-label="Ordenar productos">
+              <option value="featured">Destacados</option>
+              <option value="price-low">Precio: Menor a Mayor</option>
+              <option value="price-high">Precio: Mayor a Menor</option>
+              <option value="newest">Más Recientes</option>
+              <option value="rating">Mejor Valorados</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Grid de Productos Premium -->
+    <section class="products" id="productos" aria-label="Catálogo de productos">
+      <div class="products__container">
+        <div class="products__header">
+          <h2 class="products__title">Belleza Orgánica Destacada</h2>
+          <p class="products__subtitle">Mascarillas, cremas y más, hechos a mano con ingredientes 100% naturales</p>
+        </div>
+        
+        <div class="products__grid">
+          <!-- Producto 1 -->
+          <article class="product-card" tabindex="0">
+            <div class="product-card__image-container">
+              <img class="product-card__image" 
+                   src="verde.png" 
+                   alt="Mascarilla Facial de Arcilla Verde"
+                   loading="lazy">
+              <div class="product-card__overlay">
+                <button class="product-card__quick-view" aria-label="Vista rápida del producto">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M1 10S4 4 10 4S19 10 19 10S16 16 10 16S1 10 1 10Z" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+                <button class="product-card__wishlist" aria-label="Añadir a lista de deseos">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M17.4 4.03C17.8 3.17 17.8 2.2 17.4 1.34C16.1 0.48 14.6 0 13 0C11.4 0 9.9 0.48 8.6 1.34C8.2 2.2 8.2 3.17 8.6 4.03L10 6.5L11.4 4.03C11.8 3.17 11.8 2.2 11.4 1.34C12.7 0.48 14.2 0 15.8 0C17.4 0 18.9 0.48 20.2 1.34C20.6 2.2 20.6 3.17 20.2 4.03L18.8 6.5L17.4 4.03Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__info">
+                <h3 class="product-card__title">Mascarilla Facial de Arcilla Verde</h3>
+                <p class="product-card__description">Purifica y revitaliza tu piel con arcilla verde, menta y aceites esenciales. 100% natural y libre de químicos.</p>
+                <div class="product-card__rating">
+                  <div class="rating">
+                    <span class="rating__stars">★★★★★</span>
+                    <span class="rating__count">(128)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="price-current">$14.99</span>
+                  <span class="price-original">$19.99</span>
+                </div>
+                <button class="product-card__add-to-cart" aria-label="Añadir al carrito">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17A2 2 0 0 1 15 19H9A2 2 0 0 1 7 17V13" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 2 -->
+          <article class="product-card" tabindex="0">
+            <div class="product-card__image-container">
+              <img class="product-card__image" 
+                   src="crema.png" 
+                   alt="Crema Hidratante de Aloe Vera"
+                   loading="lazy">
+              <div class="product-card__overlay">
+                <button class="product-card__quick-view" aria-label="Vista rápida del producto">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M1 10S4 4 10 4S19 10 19 10S16 16 10 16S1 10 1 10Z" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+                <button class="product-card__wishlist" aria-label="Añadir a lista de deseos">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M17.4 4.03C17.8 3.17 17.8 2.2 17.4 1.34C16.1 0.48 14.6 0 13 0C11.4 0 9.9 0.48 8.6 1.34C8.2 2.2 8.2 3.17 8.6 4.03L10 6.5L11.4 4.03C11.8 3.17 11.8 2.2 11.4 1.34C12.7 0.48 14.2 0 15.8 0C17.4 0 18.9 0.48 20.2 1.34C20.6 2.2 20.6 3.17 20.2 4.03L18.8 6.5L17.4 4.03Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__info">
+                <h3 class="product-card__title">Crema Hidratante de Aloe Vera</h3>
+                <p class="product-card__description">Hidratación profunda con aloe vera orgánico, aceite de coco y manteca de karité. Ideal para todo tipo de piel.</p>
+                <div class="product-card__rating">
+                  <div class="rating">
+                    <span class="rating__stars">★★★★★</span>
+                    <span class="rating__count">(89)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="price-current">$17.99</span>
+                </div>
+                <button class="product-card__add-to-cart" aria-label="Añadir al carrito">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17A2 2 0 0 1 15 19H9A2 2 0 0 1 7 17V13" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 3 -->
+          <article class="product-card" tabindex="0">
+            <div class="product-card__image-container">
+              <img class="product-card__image" 
+                   src="serum.png" 
+                   alt="Sérum Facial de Rosa Mosqueta"
+                   loading="lazy">
+              <div class="product-card__overlay">
+                <button class="product-card__quick-view" aria-label="Vista rápida del producto">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M1 10S4 4 10 4S19 10 19 10S16 16 10 16S1 10 1 10Z" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+                <button class="product-card__wishlist" aria-label="Añadir a lista de deseos">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M17.4 4.03C17.8 3.17 17.8 2.2 17.4 1.34C16.1 0.48 14.6 0 13 0C11.4 0 9.9 0.48 8.6 1.34C8.2 2.2 8.2 3.17 8.6 4.03L10 6.5L11.4 4.03C11.8 3.17 11.8 2.2 11.4 1.34C12.7 0.48 14.2 0 15.8 0C17.4 0 18.9 0.48 20.2 1.34C20.6 2.2 20.6 3.17 20.2 4.03L18.8 6.5L17.4 4.03Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__info">
+                <h3 class="product-card__title">Sérum Facial de Rosa Mosqueta</h3>
+                <p class="product-card__description">Regenera y nutre tu piel con aceite puro de rosa mosqueta prensado en frío. Sin aditivos ni conservantes.</p>
+                <div class="product-card__rating">
+                  <div class="rating">
+                    <span class="rating__stars">★★★★★</span>
+                    <span class="rating__count">(156)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="price-current">$21.99</span>
+                  <span class="price-original">$29.99</span>
+                </div>
+                <button class="product-card__add-to-cart" aria-label="Añadir al carrito">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17A2 2 0 0 1 15 19H9A2 2 0 0 1 7 17V13" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 4 -->
+          <article class="product-card" tabindex="0">
+            <div class="product-card__image-container">
+              <img class="product-card__image" 
+                   src="kit.png" 
+                   alt="Kit Belleza Natural"
+                   loading="lazy">
+              <div class="product-card__overlay">
+                <button class="product-card__quick-view" aria-label="Vista rápida del producto">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M1 10S4 4 10 4S19 10 19 10S16 16 10 16S1 10 1 10Z" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+                <button class="product-card__wishlist" aria-label="Añadir a lista de deseos">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M17.4 4.03C17.8 3.17 17.8 2.2 17.4 1.34C16.1 0.48 14.6 0 13 0C11.4 0 9.9 0.48 8.6 1.34C8.2 2.2 8.2 3.17 8.6 4.03L10 6.5L11.4 4.03C11.8 3.17 11.8 2.2 11.4 1.34C12.7 0.48 14.2 0 15.8 0C17.4 0 18.9 0.48 20.2 1.34C20.6 2.2 20.6 3.17 20.2 4.03L18.8 6.5L17.4 4.03Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__info">
+                <h3 class="product-card__title">Kit Belleza Natural</h3>
+                <p class="product-card__description">Incluye mascarilla, crema y sérum. Todo hecho a mano, orgánico y libre de químicos. Ideal para regalar o consentirte.</p>
+                <div class="product-card__rating">
+                  <div class="rating">
+                    <span class="rating__stars">★★★★★</span>
+                    <span class="rating__count">(92)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="price-current">$39.99</span>
+                </div>
+                <button class="product-card__add-to-cart" aria-label="Añadir al carrito">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17A2 2 0 0 1 15 19H9A2 2 0 0 1 7 17V13" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        <div class="products__load-more">
+          <button class="btn btn--outline">Cargar Más Productos</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Premium -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <svg class="footer__logo" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="url(#footerGradient)"/>
+          <path d="M8 12h16M8 16h16M8 20h12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0066FF"/>
+              <stop offset="100%" style="stop-color:#00D4AA"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <h3 class="footer__brand-name">Belleza Natural</h3>
+        <p class="footer__description">Mascarillas, cremas y aceites para la piel, hechos a mano con ingredientes 100% naturales y orgánicos.</p>
+      </div>
+      
+      <div class="footer__links">
+        <div class="footer__section">
+          <h4 class="footer__title">Productos</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Mascarillas</a></li>
+            <li><a href="#" class="footer__link">Cremas</a></li>
+            <li><a href="#" class="footer__link">Aceites</a></li>
+            <li><a href="#" class="footer__link">Sérums</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__title">Soporte</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Centro de Ayuda</a></li>
+            <li><a href="#" class="footer__link">Contacto</a></li>
+            <li><a href="#" class="footer__link">Envíos</a></li>
+            <li><a href="#" class="footer__link">Devoluciones</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__title">Empresa</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Sobre Nosotros</a></li>
+            <li><a href="#" class="footer__link">Carreras</a></li>
+            <li><a href="#" class="footer__link">Prensa</a></li>
+            <li><a href="#" class="footer__link">Sostenibilidad</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__newsletter">
+        <h4 class="footer__title">Suscríbete</h4>
+        <p class="footer__subtitle">Recibe tips de belleza natural y ofertas exclusivas</p>
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Tu email" required>
+          <button type="submit" class="newsletter-submit">Suscribirse</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="footer__bottom">
+      <div class="footer__legal">
+        <p>&copy; 2024 Belleza Natural. Todos los derechos reservados.</p>
+        <div class="footer__legal-links">
+          <a href="#" class="footer__legal-link">Términos</a>
+          <a href="#" class="footer__legal-link">Privacidad</a>
+          <a href="#" class="footer__legal-link">Cookies</a>
+        </div>
+      </div>
+      
+      <div class="footer__social">
+        <a href="#" class="social-link" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="2" y="2" width="16" height="16" rx="4" stroke="currentColor" stroke-width="2"/>
+            <circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+            <circle cx="15" cy="5" r="1" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Twitter">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M6 2L3 6V18A2 2 0 0 0 5 20H15A2 2 0 0 0 17 18V6L14 2H6Z" stroke="currentColor" stroke-width="2"/>
+            <polyline points="8,6 12,10 8,14" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M18 2H15A5 5 0 0 0 10 7V10H7V14H10V22H14V14H17L18 10H14V7A1 1 0 0 1 15 6H18V2Z" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="2" y="2" width="16" height="16" rx="4" stroke="currentColor" stroke-width="2"/>
+            <path d="M6 8V14M10 8V14M10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11V14" stroke="currentColor" stroke-width="2"/>
+            <circle cx="6" cy="6" r="1" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
