@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Soporte - Glow Ginger Skin Products</title>
+  <meta name="description" content="Centro de ayuda y contacto de Glow Ginger Skin Products.">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Navegación principal">
+      <div class="nav__container">
+        <a class="nav__brand" href="index.html">
+          <img class="nav__logo" src="./images/logo.png" alt="Logo Glow Ginger" width="32" height="32" loading="lazy" />
+          <span class="nav__title">Glow Ginger Skin Products</span>
+        </a>
+        
+        <ul class="nav__menu" role="menubar">
+          <li><a class="nav__link" href="index.html" role="menuitem">Inicio</a></li>
+          <li><a class="nav__link" href="index.html#productos" role="menuitem">Productos</a></li>
+          <li><a class="nav__link" href="empresa.html" role="menuitem">Sobre Nosotros</a></li>
+          <li><a class="nav__link" href="soporte.html" role="menuitem">Contacto</a></li>
+        </ul>
+        
+        <div class="nav__actions">
+          <button class="search-toggle" aria-label="Buscar productos" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M19 19L13 13M15 8A7 7 0 1 1 1 8A7 7 0 0 1 15 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          
+          <button class="cart-btn" aria-label="Carrito de compras" aria-describedby="cart-count">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17A2 2 0 0 1 15 19H9A2 2 0 0 1 7 17V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="cart-badge" id="cart-count" aria-live="polite">0</span>
+          </button>
+          
+          <button class="auth-btn" aria-label="Iniciar sesión en Glow Ginger">Iniciar Sesión</button>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="search-bar" role="search">
+      <div class="search-container">
+        <input type="search" class="search-input" placeholder="Buscar productos, marcas, categorías..." aria-label="Buscar productos">
+        <button class="search-submit" aria-label="Buscar">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M19 19L13 13M15 8A7 7 0 1 1 1 8A7 7 0 0 1 15 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="soporte">
+      <div class="hero__background">
+        <div class="hero__image" style="background-image: url('soporte-hero.jpg')"></div>
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__title">Centro de Ayuda</h1>
+        <p class="hero__subtitle">Encuentra respuestas a tus preguntas o contáctanos directamente</p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="products">
+      <div class="products__container">
+        <h1 class="products__title">Centro de Ayuda</h1>
+        <p class="products__subtitle">Encuentra respuestas a tus preguntas sobre nuestros <strong>productos naturales</strong> y <strong>servicio al cliente</strong></p>
+        
+        <div class="support-grid">
+          <!-- Columna FAQ -->
+          <div class="faq-card">
+            <h2 class="filters__title">Preguntas Frecuentes</h2>
+            <div class="faq">
+              <details>
+                <summary>¿Qué problema resuelven sus productos?</summary>
+                <p>El <strong>acné</strong> es un problema común en adolescentes causado por cambios hormonales que aumentan la grasa en la piel y tapan los poros. Nuestros <strong>productos naturales</strong>, con extracto de jengibre, ayudan a reducir los granos, combatir las bacterias y mejorar la piel sin dañarla.</p>
+              </details>
+              <details>
+                <summary>¿Qué beneficios tiene el jengibre?</summary>
+                <p>El jengibre tiene <strong>propiedades antiinflamatorias y antibacterianas</strong>. Es ideal para reducir la irritación, combatir las bacterias y mejorar la apariencia de la piel de forma segura y efectiva.</p>
+              </details>
+              <details>
+                <summary>¿Qué hace único a Glow Ginger?</summary>
+                <p>Nuestra <strong>propuesta de valor única</strong> radica en ofrecer productos libres de químicos que realmente funcionan. Utilizamos <strong>ingredientes 100% naturales</strong>, como el extracto de sábila (aloe vera) y jengibre, para resultados visibles y seguros.</p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Columna Enlaces Rápidos -->
+          <div class="faq-card">
+            <h2 class="filters__title">Enlaces Rápidos</h2>
+            <ul class="footer__list">
+              <li><a href="empresa.html" class="footer__link">Sobre Nosotros</a></li>
+              <li><a href="#" class="footer__link">Política de Devoluciones</a></li>
+              <li><a href="#" class="footer__link">Guía de Envíos</a></li>
+              <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sección de Contacto -->
+        <section class="contact-section" id="contacto">
+          <h2 class="products__title">Contacto</h2>
+          <div class="contact-grid">
+            <!-- Formulario -->
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" required>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary">Enviar Mensaje</button>
+            </form>
+
+            <!-- Información de Contacto -->
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                <div class="contact-text">
+                  <strong>Teléfono</strong>
+                  <a href="tel:+51912345678">+51 912 345 678</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <path d="M22 6l-10 7L2 6"/>
+                </svg>
+                <div class="contact-text">
+                  <strong>Email</strong>
+                  <a href="mailto:atencion@glowginger.com">atencion@glowginger.com</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <div class="contact-text">
+                  <strong>Dirección</strong>
+                  <p>Calle Ejemplo 123<br>Lima, Perú</p>
+                </div>
+              </div>
+              <!-- Mapa -->
+              <div class="map">
+                <iframe src="https://www.google.com/maps?q=-12.046374,-77.042793&z=15&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <h3 class="footer__brand-name">Glow Ginger Skin Products</h3>
+        <p class="footer__description">Productos a base de jengibre para el cuidado natural de la piel, creados con ingredientes sostenibles y atención artesana.</p>
+      </div>
+      
+      <div class="footer__links">
+        <div class="footer__section">
+          <h4 class="footer__title">Productos</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Mascarillas</a></li>
+            <li><a href="#" class="footer__link">Cremas</a></li>
+            <li><a href="#" class="footer__link">Aceites</a></li>
+            <li><a href="#" class="footer__link">Sérums</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__title">Soporte</h4>
+          <ul class="footer__list">
+            <li><a href="soporte.html" class="footer__link">Centro de Ayuda</a></li>
+            <li><a href="soporte.html" class="footer__link">Contacto</a></li>
+            <li><a href="soporte.html" class="footer__link">Envíos</a></li>
+            <li><a href="soporte.html" class="footer__link">Devoluciones</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__title">Empresa</h4>
+          <ul class="footer__list">
+            <li><a href="empresa.html" class="footer__link">Sobre Nosotros</a></li>
+            <li><a href="empresa.html" class="footer__link">Carreras</a></li>
+            <li><a href="empresa.html" class="footer__link">Prensa</a></li>
+            <li><a href="empresa.html" class="footer__link">Sostenibilidad</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__newsletter">
+        <h4 class="footer__title">Suscríbete</h4>
+        <p class="footer__subtitle">Recibe tips de belleza natural y ofertas exclusivas</p>
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Tu email" required>
+          <button type="submit" class="newsletter-submit">Suscribirse</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="footer__bottom">
+      <p>&copy; 2024 Glow Ginger Skin Products. Todos los derechos reservados.</p>
+      <a href="index.html">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-form');
+      if (form) {
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          alert('Mensaje enviado. Nos pondremos en contacto contigo pronto.');
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Empresa - Glow Ginger Skin Products</title>
+  <meta name="description" content="Conoce la misión, visión y valores de Glow Ginger Skin Products.">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Navegación principal">
+      <div class="nav__container">
+        <a class="nav__brand" href="index.html">
+          <img class="nav__logo" src="./images/logo.png" alt="Logo Glow Ginger" width="32" height="32" loading="lazy" />
+          <span class="nav__title">Glow Ginger Skin Products</span>
+        </a>
+        
+        <ul class="nav__menu" role="menubar">
+          <li><a class="nav__link" href="index.html" role="menuitem">Inicio</a></li>
+          <li><a class="nav__link" href="index.html#productos" role="menuitem">Productos</a></li>
+          <li><a class="nav__link" href="empresa.html" role="menuitem">Sobre Nosotros</a></li>
+          <li><a class="nav__link" href="soporte.html" role="menuitem">Contacto</a></li>
+        </ul>
+        
+        <div class="nav__actions">
+          <button class="search-toggle" aria-label="Buscar productos" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M19 19L13 13M15 8A7 7 0 1 1 1 8A7 7 0 0 1 15 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          
+          <button class="cart-btn" aria-label="Carrito de compras" aria-describedby="cart-count">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17A2 2 0 0 1 15 19H9A2 2 0 0 1 7 17V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="cart-badge" id="cart-count" aria-live="polite">0</span>
+          </button>
+          
+          <button class="auth-btn" aria-label="Iniciar sesión en Glow Ginger">Iniciar Sesión</button>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="search-bar" role="search">
+      <div class="search-container">
+        <input type="search" class="search-input" placeholder="Buscar productos, marcas, categorías..." aria-label="Buscar productos">
+        <button class="search-submit" aria-label="Buscar">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M19 19L13 13M15 8A7 7 0 1 1 1 8A7 7 0 0 1 15 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="empresa" aria-label="Nuestra Empresa">
+      <div class="hero__background">
+        <div class="hero__image" style="background-image: url('empresa-hero.jpg')"></div>
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__title">Nuestra Empresa</h1>
+        <p class="hero__subtitle">Conoce más sobre nuestra misión, visión y valores en Glow Ginger Skin Products</p>
+      </div>
+    </section>
+
+    <section class="products about-section" aria-label="Información Empresarial">
+      <div class="products__container">
+        <h1 class="products__title">Nuestra Empresa</h1>
+        <p class="products__subtitle">Conoce más sobre nuestra <strong>misión</strong>, <strong>visión</strong> y <strong>valores</strong></p>
+
+        <article>
+          <h2 class="filters__title">Misión</h2>
+          <p>Ofrecer <strong>productos de cuidado facial</strong> de alta calidad con ingredientes naturales (en particular jengibre) que promuevan la <strong>salud de la piel</strong> y el bienestar de nuestras comunidades, cuidando el medio ambiente en cada etapa del proceso.</p>
+        </article>
+
+        <article>
+          <h2 class="filters__title">Visión</h2>
+          <p>Ser reconocidos regionalmente por nuestras <strong>formulaciones limpias</strong>, <strong>prácticas sostenibles</strong> y relaciones transparentes con clientes y proveedores, liderando la innovación en cosmética natural.</p>
+        </article>
+
+        <article>
+          <h2 class="filters__title">Historia</h2>
+          <p><strong>Glow Ginger</strong> surgió de la experiencia ancestral con plantas y la investigación cosmética moderna. Iniciamos como un proyecto local y hoy buscamos ampliar nuestro alcance manteniendo el <strong>enfoque artesanal y ético</strong>.</p>
+        </article>
+
+        <article>
+          <h2 class="filters__title">Valores</h2>
+          <ul class="footer__list">
+            <li><strong>Transparencia</strong> en todos nuestros procesos</li>
+            <li><strong>Sostenibilidad</strong> ambiental y social</li>
+            <li><strong>Calidad</strong> en cada producto</li>
+            <li><strong>Respeto</strong> por la comunidad y el medio ambiente</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <h3 class="footer__brand-name">Glow Ginger Skin Products</h3>
+        <p class="footer__description">Productos a base de jengibre para el cuidado natural de la piel, creados con ingredientes sostenibles y atención artesana.</p>
+      </div>
+      
+      <div class="footer__links">
+        <div class="footer__section">
+          <h4 class="footer__title">Productos</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Mascarillas</a></li>
+            <li><a href="#" class="footer__link">Cremas</a></li>
+            <li><a href="#" class="footer__link">Aceites</a></li>
+            <li><a href="#" class="footer__link">Sérums</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__title">Soporte</h4>
+          <ul class="footer__list">
+            <li><a href="soporte.html" class="footer__link">Centro de Ayuda</a></li>
+            <li><a href="soporte.html" class="footer__link">Contacto</a></li>
+            <li><a href="soporte.html" class="footer__link">Envíos</a></li>
+            <li><a href="soporte.html" class="footer__link">Devoluciones</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__section">
+          <h4 class="footer__title">Empresa</h4>
+          <ul class="footer__list">
+            <li><a href="empresa.html" class="footer__link">Sobre Nosotros</a></li>
+            <li><a href="empresa.html" class="footer__link">Carreras</a></li>
+            <li><a href="empresa.html" class="footer__link">Prensa</a></li>
+            <li><a href="empresa.html" class="footer__link">Sostenibilidad</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__newsletter">
+        <h4 class="footer__title">Suscríbete</h4>
+        <p class="footer__subtitle">Recibe tips de belleza natural y ofertas exclusivas</p>
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Tu email" required>
+          <button type="submit" class="newsletter-submit">Suscribirse</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="footer__bottom">
+      <p>&copy; 2024 Glow Ginger Skin Products. Todos los derechos reservados.</p>
+      <a href="index.html">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <style>
+    .about-section {
+      margin-top: -4rem;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .about-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-card__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--color-principal);
+    }
+
+    .about-icon {
+      color: var(--color-principal);
+      width: 32px;
+      height: 32px;
+    }
+
+    .about-card__text {
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .about-card__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .about-card__list li {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #eee;
+      color: #666;
+      display: flex;
+      align-items: center;
+    }
+
+    .about-card__list li::before {
+      content: "•";
+      color: var(--color-principal);
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+  </style>
+</body>
+</html>
