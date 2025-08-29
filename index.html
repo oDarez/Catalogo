@@ -161,7 +161,7 @@
           <!-- Productos se renderizan dinámicamente desde JSON -->
           <article class="product-card">
             <div class="product-card__image-container">
-              <img class="product-card__image" src="./images/producto-glow-ginger.jpg" alt="Crema Glow Ginger" loading="lazy">
+              <img class="product-card__image" src="./images/producto-glow-ginger.jpg" alt="Crema Glow Ginger" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+no+disponible'">
             </div>
             <div class="product-card__content">
               <div class="product-card__info">
@@ -303,123 +303,138 @@
 
   <!-- Scripts: productos JSON + render dinámico (añadido / optimizado) -->
   <script>
-    // Datos de productos en formato JSON (puede extraerse a un archivo externo si se desea)
-    const PRODUCTS = [
-      {
-        "id": "p1",
-        "nombre": "Mascarilla Facial de Arcilla Verde",
-        "descripcion": "Purifica y revitaliza tu piel con arcilla verde, menta y aceites esenciales. 100% natural y libre de químicos.",
-        "precio": 14.99,
-        "precioOriginal": 19.99,
-        "rating": 4.8,
-        "reviews": 128,
-        "imagen": "./images/verde.png"
-      },
-      {
-        "id": "p2",
-        "nombre": "Crema Revitalizante de Jengibre",
-        "descripcion": "Crema natural con extracto de jengibre que hidrata, regenera y protege la piel.",
-        "precio": 17.99,
-        "precioOriginal": null,
-        "rating": 4.6,
-        "reviews": 89,
-        "imagen": "./images/crema.png"
-      },
-      {
-        "id": "p3",
-        "nombre": "Sérum Facial de Rosa Mosqueta",
-        "descripcion": "Regenera y nutre tu piel con aceite puro de rosa mosqueta prensado en frío. Sin aditivos ni conservantes.",
-        "precio": 21.99,
-        "precioOriginal": 29.99,
-        "rating": 4.9,
-        "reviews": 156,
-        "imagen": "./images/serum.png"
-      },
-      {
-        "id": "p4",
-        "nombre": "Kit Glow Ginger",
-        "descripcion": "Incluye mascarilla, crema y sérum con base de jengibre. Hecho a mano, orgánico y perfecto para regalar.",
-        "precio": 39.99,
-        "precioOriginal": null,
-        "rating": 4.7,
-        "reviews": 92,
-        "imagen": "./images/kit.png"
-      }
-    ];
+// Datos de productos usando imágenes locales
+const PRODUCTS = [
+  {
+    "id": "p1",
+    "nombre": "Mascarilla Facial de Arcilla Verde",
+    "descripcion": "Purifica y revitaliza tu piel con arcilla verde, menta y aceites esenciales. 100% natural y libre de químicos.",
+    "precio": 14.99,
+    "precioOriginal": 19.99,
+    "rating": 4.8,
+    "reviews": 128,
+    "imagen": "./images/verde.png"
+  },
+  {
+    "id": "p2",
+    "nombre": "Crema Revitalizante de Jengibre",
+    "descripcion": "Crema natural con extracto de jengibre que hidrata, regenera y protege la piel.",
+    "precio": 17.99,
+    "precioOriginal": null,
+    "rating": 4.6,
+    "reviews": 89,
+    "imagen": "./images/crema.png"
+  },
+  {
+    "id": "p3",
+    "nombre": "Sérum Facial",
+    "descripcion": "Regenera y nutre tu piel con aceite prensado en frío. Sin aditivos ni conservantes.",
+    "precio": 21.99,
+    "precioOriginal": 29.99,
+    "rating": 4.9,
+    "reviews": 156,
+    "imagen": "./images/serum.png"
+  },
+  {
+    "id": "p4",
+    "nombre": "Kit Glow Ginger",
+    "descripcion": "Incluye mascarilla, crema y sérum con base de jengibre. Hecho a mano, orgánico y perfecto para regalar.",
+    "precio": 39.99,
+    "precioOriginal": null,
+    "rating": 4.7,
+    "reviews": 92,
+    "imagen": "./images/kit.png"
+  }
+];
 
-    // Formato manual para cumplir con "S/. 25.00"
-    function formatSoles(value) {
-      return 'S/. ' + Number(value).toFixed(2);
-    }
+// Formato manual para cumplir con "S/. 25.00"
+function formatSoles(value) {
+  return 'S/. ' + Number(value).toFixed(2);
+}
 
-    function renderProducts() {
-      const grid = document.getElementById('products-grid');
-      if (!grid) return;
-      grid.innerHTML = '';
-      PRODUCTS.forEach(p => {
-        const article = document.createElement('article');
-        article.className = 'product-card';
-        article.tabIndex = 0;
-        article.innerHTML = `
-          <div class="product-card__image-container">
-            <img class="product-card__image" src="${p.imagen}" alt="${p.nombre}" loading="lazy">
-            <div class="product-card__overlay">
-              <button class="product-card__quick-view" aria-label="Vista rápida del producto">
-                <!-- svg... -->
-              </button>
-              <button class="product-card__wishlist" aria-label="Añadir a lista de deseos"></button>
+function renderProducts() {
+  const grid = document.getElementById('products-grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+  
+  PRODUCTS.forEach(p => {
+    const article = document.createElement('article');
+    article.className = 'product-card';
+    article.tabIndex = 0;
+    article.innerHTML = `
+      <div class="product-card__image-container">
+        <img class="product-card__image" src="${p.imagen}" alt="${p.nombre}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Imagen+no+disponible'">
+        <div class="product-card__overlay">
+          <button class="product-card__quick-view" aria-label="Vista rápida del producto">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M1 10s3-7 9-7 9 7 9 7-3 7-9 7-9-7-9-7z" stroke="currentColor" stroke-width="2"/>
+              <circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+          <button class="product-card__wishlist" aria-label="Añadir a lista de deseos">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 18.35l-1.45-1.32C3.4 12.36 1 9.28 1 5.5 1 2.42 3.42 0 6.5 0c1.74 0 3.41.81 4.5 2.09C12.09.81 13.76 0 15.5 0 18.58 0 21 2.42 21 5.5c0 3.78-2.4 6.86-7.55 11.54L10 18.35z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="product-card__content">
+        <div class="product-card__info">
+          <h3 class="product-card__title">${p.nombre}</h3>
+          <p class="product-card__description">${p.descripcion}</p>
+          <div class="product-card__rating">
+            <div class="rating">
+              <span class="rating__stars">${'★'.repeat(Math.round(p.rating))}</span>
+              <span class="rating__count">(${p.reviews})</span>
             </div>
           </div>
-          <div class="product-card__content">
-            <div class="product-card__info">
-              <h3 class="product-card__title">${p.nombre}</h3>
-              <p class="product-card__description">${p.descripcion}</p>
-              <div class="product-card__rating">
-                <div class="rating">
-                  <span class="rating__stars">${'★'.repeat(Math.round(p.rating))}</span>
-                  <span class="rating__count">(${p.reviews})</span>
-                </div>
-              </div>
-            </div>
-            <div class="product-card__footer">
-              <div class="product-card__price">
-                <span class="price-current">${formatSoles(p.precio)}</span>
-                ${p.precioOriginal ? `<span class="price-original">${formatSoles(p.precioOriginal)}</span>` : ''}
-              </div>
-              <button class="product-card__add-to-cart" aria-label="Añadir al carrito" data-product-id="${p.id}" data-price="${p.precio}" data-currency="PEN">
-                <!-- svg carrito -->
-              </button>
-            </div>
+        </div>
+        <div class="product-card__footer">
+          <div class="product-card__price">
+            <span class="price-current">${formatSoles(p.precio)}</span>
+            ${p.precioOriginal ? `<span class="price-original">${formatSoles(p.precioOriginal)}</span>` : ''}
           </div>
-        `;
-        grid.appendChild(article);
-      });
-    }
+          <button class="product-card__add-to-cart" aria-label="Añadir al carrito" data-product-id="${p.id}" data-price="${p.precio}" data-currency="PEN">
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+    `;
+    grid.appendChild(article);
+  });
+}
 
-    document.addEventListener('DOMContentLoaded', () => {
-      renderProducts();
+document.addEventListener('DOMContentLoaded', () => {
+  // Actualizar logo si existe
+  const logo = document.querySelector('.nav__logo');
+  if (logo) {
+    logo.src = './images/logo.png';
+  }
+  
+  // Renderizar productos
+  renderProducts();
 
-      // Sincronizar slider de precio y mostrar en S/.
-      const slider = document.getElementById('price-slider');
-      const priceDisplayEl = document.querySelector('.price-display .price-current');
-      if (slider && priceDisplayEl) {
-        const updateDisplay = () => {
-          priceDisplayEl.textContent = formatSoles(slider.value);
-        };
-        updateDisplay();
-        slider.addEventListener('input', updateDisplay);
-      }
+  // Sincronizar slider de precio y mostrar en S/.
+  const slider = document.getElementById('price-slider');
+  const priceDisplayEl = document.querySelector('.price-display .price-current');
+  if (slider && priceDisplayEl) {
+    const updateDisplay = () => {
+      priceDisplayEl.textContent = formatSoles(slider.value);
+    };
+    updateDisplay();
+    slider.addEventListener('input', updateDisplay);
+  }
 
-      // Manejo básico del formulario de contacto (demostrativo)
-      const form = document.getElementById('contact-form');
-      if (form) {
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          alert('Mensaje enviado. Nos pondremos en contacto contigo pronto.');
-          form.reset();
-        });
-      }
+  // Manejo básico del formulario de contacto (demostrativo)
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Mensaje enviado. Nos pondremos en contacto contigo pronto.');
+      form.reset();
     });
+  }
+});
   </script>
 </body>
 </html>
