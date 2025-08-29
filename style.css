@@ -192,11 +192,12 @@ img { display: block; max-width: 100%; }
   z-index: 0;
 }
 .hero__image {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.7);
+  background-repeat: no-repeat; /* Asegura que la imagen no se repita */
+  filter: brightness(0.7); /* Ajusta el brillo para mejor visibilidad */
 }
 .hero__overlay {
   position: absolute;

@@ -159,6 +159,31 @@
         <!-- Reemplazado: el grid estático por un contenedor dinámico -->
         <div id="products-grid" class="products__grid" aria-live="polite">
           <!-- Productos se renderizan dinámicamente desde JSON -->
+          <article class="product-card">
+            <div class="product-card__image-container">
+              <img class="product-card__image" src="./images/producto-glow-ginger.jpg" alt="Crema Glow Ginger" loading="lazy">
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__info">
+                <h3 class="product-card__title">Crema Glow Ginger</h3>
+                <p class="product-card__description">Crema hidratante con extracto de jengibre para una piel suave y saludable.</p>
+                <div class="product-card__rating">
+                  <div class="rating">
+                    <span class="rating__stars">★★★★☆</span>
+                    <span class="rating__count">(45)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="price-current">S/. 25.00</span>
+                </div>
+                <button class="product-card__add-to-cart" aria-label="Añadir al carrito">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
         
         <div class="products__load-more">
